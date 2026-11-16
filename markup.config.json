@@ -1,0 +1,7 @@
+{
+  "site": "https://nonprofit-marketing-nerds.github.io/email-previews",
+  "defaultFolderId": "",
+  "clients": {
+    "dmec": { "label": "DMEC", "folderId": "" }
+  }
+}
