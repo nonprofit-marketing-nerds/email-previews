@@ -29,7 +29,7 @@ GitHub can keep serving the old version for up to 10 minutes. If MarkUp still sh
 - `<client>/<email>/index.html`: the emails.
 - `index.html`: a blank landing page, so the site root doesn't list anything.
 - `markups.json`: the MarkUp link for each email. GitHub updates it; don't edit it by hand unless a MarkUp was deleted.
-- `markup.config.json`: the label used in MarkUp names for each client, and an optional MarkUp folder ID per client (empty means the workspace root).
+- `markup.config.json`: for each client, the label used in MarkUp names, the platform that sends its emails (`pardot`, `neon-one` or `other`; the email-preview skill uses it for its checks), and an optional MarkUp folder ID (empty means the workspace root).
 - `scripts/build-site.mjs`: builds the published copy and adds the `noindex` tag.
 - `scripts/create-markups.mjs`: creates the MarkUp for each new email. Run it with `DRY_RUN=1` to see what it would do.
 - `.github/workflows/pages.yml`: publishes on every push to `main`, then creates the MarkUps. It needs the `MARKUP_API_KEY` repo secret; without it the site still publishes and the MarkUp step is skipped.

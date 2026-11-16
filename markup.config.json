@@ -2,6 +2,7 @@
   "site": "https://nonprofit-marketing-nerds.github.io/email-previews",
   "defaultFolderId": "",
   "clients": {
-    "dmec": { "label": "DMEC", "folderId": "" }
+    "dmec": { "label": "DMEC", "platform": "pardot", "folderId": "" },
+    "sante": { "label": "Santé", "platform": "neon-one", "folderId": "" }
   }
 }
