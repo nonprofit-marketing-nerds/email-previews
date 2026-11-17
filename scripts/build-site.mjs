@@ -8,7 +8,7 @@ const ROOT = process.cwd();
 const OUT = join(ROOT, "_site");
 const SKIP = new Set([
   ".git", ".github", ".gitignore", "_site", "node_modules", "scripts",
-  "README.md", "markup.config.json", "markups.json",
+  "README.md", "markup.config.json", "markups.json", "mailchimp.json",
 ]);
 const NOINDEX = '<meta name="robots" content="noindex, nofollow">';
 const HEAD_TAG = /<head(\s[^>]*)?>/i; // matches <head> but not <header>

@@ -32,4 +32,5 @@ GitHub can keep serving the old version for up to 10 minutes. If MarkUp still sh
 - `markup.config.json`: for each client, the label used in MarkUp names, the platform that sends its emails (`pardot`, `neon-one` or `other`; the email-preview skill uses it for its checks), and an optional MarkUp folder ID (empty means the workspace root).
 - `scripts/build-site.mjs`: builds the published copy and adds the `noindex` tag.
 - `scripts/create-markups.mjs`: creates the MarkUp for each new email. Run it with `DRY_RUN=1` to see what it would do.
+- `scripts/sync-mailchimp.mjs`: for clients whose platform is `mailchimp` (ACES), keeps a saved template in the client's Mailchimp with the latest version of each email. It never creates or sends a campaign. It needs one repo secret per client, named `MAILCHIMP_API_KEY_<CLIENT>` (for example `MAILCHIMP_API_KEY_ACES`), plus a matching line in `.github/workflows/pages.yml`. Template IDs are saved in `mailchimp.json`.
 - `.github/workflows/pages.yml`: publishes on every push to `main`, then creates the MarkUps. It needs the `MARKUP_API_KEY` repo secret; without it the site still publishes and the MarkUp step is skipped.
